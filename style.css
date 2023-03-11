@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #000;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+header {
+    height: 8rem;
+    border-bottom: 1px solid #181818;
+    width: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 5rem;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 200%;
+
+    --bg-size: 400%;
+    --color-one: hsl(330, 86%, 46%);
+    --color-two: hsl(271, 97%, 48%);
+    --color-three: hsl(0, 0%, 100%);
+    background: linear-gradient(
+                  90deg,
+                  var(--color-three),
+                  var(--color-one),
+                  var(--color-two),
+                  var(--color-one),
+                  var(--color-three)
+                ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 8s infinite linear;
+
+}
+
+p {
+    font-weight: 900;
+    font-size: 1.6rem;
+}
+
+span {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+img, svg {
+    cursor: pointer;
+    transition: .5s;
+}
+
+img:hover, svg:hover {
+    scale: 1.05;
+    
+}
+
+
+
+svg {
+    fill: #fff;
+    width: 2rem;
+    height: 2rem;
+
+}
+
+#github:hover {
+    fill: rgb(1, 158, 105);
+}
+
+#linkedin:hover {
+    fill: rgb(68, 93, 176);
+}
+
+#pomodoro:hover {
+    fill: rgb(217, 7, 7);
+}
+
+#html5:hover {
+    fill: #E06E3C;
+}
+
+#css3:hover{
+    fill: #2F4CDC;
+}
+
+#js:hover{
+    fill: #FCB040;
+}
+
+nav {
+    padding: 0 1rem;    
+    margin: 5rem auto 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.active {
+    scale: 1.05;
+}
+
+.container {
+    max-width: 112rem;
+    margin:  0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+main .container {
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.cards {
+    margin-top: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
+    gap: 2rem;
+    row-gap: 2rem;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    height: 20rem;
+}
+
+.card img {
+    border-radius: 1.4rem;
+    width: 100%;
+    max-height: 20rem;
+    object-fit: cover;
+}
+
+footer {
+    margin: 5rem auto 2rem;
+    display: flex;
+}
+
+.social, footer .container div {
+    display: flex;
+    gap: .5rem;
+}
+
+@keyframes move-bg {
+    to {
+        background-position: var(--bg-size) 0;
+      }
+    
+}
+
+
+@media (min-width: 780px) {
+
+    nav {
+        padding: 0; 
+    }
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-flow: row;
+        gap: 4rem;
+        row-gap: 4rem;
+    }
+
+    .card {
+        height: 30rem;
+    }
+
+    .card img {
+        border-radius: 2.4rem;
+        width: 100%;
+        max-height: 30rem;
+        object-fit: cover;
+    }
+
+    
+}
