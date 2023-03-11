@@ -1,6 +1,6 @@
 # **relax.chill.code.remix.**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c493de68-a038-45d1-a414-c923baec2339/Untitled.png)
+![Untitled](https://anasilveira9787.github.io/relax-chill-code-remix/assets/cover.png)
 
 This is an application for you to listen to good music while coding. Made mobile firts, using javascript, HTML and CSS.
 
